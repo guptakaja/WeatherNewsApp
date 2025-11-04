@@ -1,4 +1,65 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Weather & News Aggregator App
+
+A React Native TypeScript app that provides weather information and filters news based on current weather conditions.
+
+## Features
+
+### 🌤️ Weather Information
+- Current weather data based on user's location
+- 5-day weather forecast
+- Temperature display in Celsius or Fahrenheit
+- Weather conditions and additional details (humidity, pressure, feels like)
+
+### 📰 Weather-Based News Filtering
+- **Cold Weather (< 10°C/50°F)**: Shows serious/somber news
+- **Hot Weather (> 30°C/86°F)**: Shows alert/urgent news  
+- **Cool Weather (10-20°C/50-68°F)**: Shows positive/winning news
+- **Moderate Weather (20-30°C/68-86°F)**: Shows balanced news
+
+### ⚙️ User Settings
+- Temperature unit preference (Celsius/Fahrenheit)
+- News category selection
+- Location refresh functionality
+
+### 📱 UI/UX Features
+- Responsive design for different screen sizes
+- Pull-to-refresh functionality
+- Loading states and error handling
+- Clean, modern interface with weather-based visual cues
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js (>= 18)
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development on macOS)
+
+### Installation
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Set up API Keys:**
+   
+   Get your free API keys:
+   - **OpenWeatherMap**: https://openweathermap.org/api
+   - **NewsAPI**: https://newsapi.org/
+
+   Update the API keys in `src/config/api.ts`:
+   ```typescript
+   export const API_CONFIG = {
+     OPENWEATHER_API_KEY: 'your_openweathermap_key_here',
+     NEWS_API_KEY: 'your_newsapi_key_here',
+   };
+   ```
+
+3. **iOS Setup (macOS only):**
+   ```bash
+   cd ios && pod install && cd ..
+   ```
 
 # Getting Started
 
